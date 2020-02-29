@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+.calc {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+  border: 2px solid green;
+  position: relative;
+  margin-top: .5rem!important;
+  height: 76px;
+  margin-bottom: 5px;
+  width: 59%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-right: .5rem!important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom {
+  background-color: #fff;
+  text-align: right!important;
+  word-wrap: break-word;
+  padding-top: 2rem!important;
+  padding-right: .5rem!important;
+  font-size: 1.75rem;
+}
+
+.body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.calc_pad {
+  text-align: center;
+  padding: 10px;
+  width: 64%;
+  border: thin solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number {
+  background-color: #eee;
+  border: thin solid #ddd;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.number:focus, .number:active {
+  outline: none;
+  border: thin solid #ddd;
+}
+
+.history {
+  border: 2px solid greenyellow; 
+  background-color: #fff;
+  position: relative;
+  height: 400px;
+  overflow-y: scroll;
+  width: 300px;
+}
+
+
+.history_item_button {
+  transition-duration: 0.4s;
+  display: block;
+  width: 100%;
+  color: #111;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.text_right {
+  text-align: right;
+  padding: .5rem!important;
+}
+
+.trash {
+  cursor: pointer;
+  left: 10px;
+  position: absolute;
+  top: 10px;
 }
